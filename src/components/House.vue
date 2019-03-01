@@ -1,5 +1,7 @@
 <template>
   <div>
+
+
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -192,6 +194,7 @@
             transform="translate(-5.83 -57.42)"
           ></path>
           <path
+
             class="cls-16"
             d="M63.85,208c2.59,2.24,2.53,6.56-.14,9.65s-6.93,3.76-9.53,1.51-2.53-6.57.13-9.65S61.25,205.74,63.85,208Z"
             transform="translate(-5.83 -57.42)"
@@ -1126,6 +1129,7 @@
         </g>
       </g>
     </svg>
+    <img class="sun" :style="{bottom: sunPos + '%'}" src="../assets/sun.svg" />
   </div>
 </template>
 
@@ -1133,11 +1137,22 @@
 /* eslint-disable prettier/prettier */
 export default {
   name: "house",
-  props: ["size"]
+  props: ["size", "sunPos"]
 };
 </script>
 
 <style scoped>
+
+.sun {
+  position: absolute;
+  width: 20%;
+  margin: 0 auto;
+  left: 39%;
+  bottom: 60%;
+  text-align: center;
+  justify-content: center;
+  z-index: -1;
+}
 .ground.sm {
   transform: scaleX(0.72);
   transition: 0.5s;

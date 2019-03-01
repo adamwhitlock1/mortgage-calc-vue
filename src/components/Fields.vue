@@ -3,7 +3,7 @@
     <b-container>
       <b-row class="justify-content-center">
         <b-col cols="6" class="house-col" :class="size">
-          <House :size="size"></House>
+          <House :size="size" :sunPos="sunPos"></House>
         </b-col>
       </b-row>
       <b-row class="justify-content-center">
@@ -71,6 +71,7 @@
           <hr />
           Your Monthly Payment
           <h2 class="lead">${{ monthlyPayment }}</h2>
+          <h4>{{ sunPos }}</h4>
         </b-col>
       </b-row>
     </b-container>
@@ -121,6 +122,9 @@ export default {
         size = "lg";
       }
       return size;
+    },
+    sunPos() {
+      return ((this.r / 15) * 100 - 100) * -1;
     }
   }
 };
