@@ -19,8 +19,8 @@
             type="range"
             v-model="p"
             min="100000"
-            max="5000000"
-            step="10000"
+            max="1000000"
+            step="1000"
           />
           <b-row>
             <b-col class="text-center justify-content-center">
@@ -111,7 +111,7 @@ export default {
     },
 
     size() {
-      const values = [150000, 200000, 500000];
+      const values = [300000, 300000, 500000];
       let size = {};
       if (this.p <= values[0]) {
         size = "sm";
