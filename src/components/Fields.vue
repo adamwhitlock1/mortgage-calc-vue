@@ -71,7 +71,6 @@
           <hr />
           Your Monthly Payment
           <h2 class="lead">${{ monthlyPayment }}</h2>
-          <h4>{{ sunPos }}</h4>
         </b-col>
       </b-row>
     </b-container>
